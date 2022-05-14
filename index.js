@@ -1,5 +1,5 @@
 //User location
-getJSON('http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=fb51c6b86eeb06ab9f272171b19b4543&units=metric',function(data){ 
+$.getJSON('http://ip-api.com/json', function(data){ 
 
 var lat = data.lat; //# lat=위도
 var lon = data.lon; //#lon=경도
