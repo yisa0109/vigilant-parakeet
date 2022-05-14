@@ -1,5 +1,5 @@
 //User location
-$.getJSON('http://ip-api.com/json', 
+$.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Busan&appid=fb51c6b86eeb06ab9f272171b19b4543', 
 function(data){ 
  if (window.location.protocol != "https:") {
     window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
