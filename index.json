@@ -1,41 +1,41 @@
 {
 	"coord": {
-		"lon": -0.1257,
-		"lat": 51.5085
+		"lon": 129.0403,
+		"lat": 35.1028
 	},
 	"weather": [{
-		"id": 803,
-		"main": "Clouds",
-		"description": "broken clouds",
-		"icon": "04d"
+		"id": 800,
+		"main": "Clear",
+		"description": "clear sky",
+		"icon": "01d"
 	}],
 	"base": "stations",
 	"main": {
-		"temp": 282.28,
-		"feels_like": 280.56,
-		"temp_min": 280.21,
-		"temp_max": 283.47,
-		"pressure": 1022,
-		"humidity": 91
+		"temp": 298.14,
+		"feels_like": 297.03,
+		"temp_min": 298.14,
+		"temp_max": 298.14,
+		"pressure": 1010,
+		"humidity": 13
 	},
 	"visibility": 10000,
 	"wind": {
-		"speed": 3.09,
-		"deg": 230
+		"speed": 5.14,
+		"deg": 320
 	},
 	"clouds": {
-		"all": 66
+		"all": 0
 	},
-	"dt": 1652506341,
+	"dt": 1652507852,
 	"sys": {
-		"type": 2,
-		"id": 2019646,
-		"country": "GB",
-		"sunrise": 1652501425,
-		"sunset": 1652557406
+		"type": 1,
+		"id": 8086,
+		"country": "KR",
+		"sunrise": 1652473280,
+		"sunset": 1652523550
 	},
-	"timezone": 3600,
-	"id": 2643743,
-	"name": "London",
+	"timezone": 32400,
+	"id": 1838524,
+	"name": "Busan",
 	"cod": 200
 }
