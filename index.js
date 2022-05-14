@@ -1,4 +1,5 @@
 //User location
+getJSON('http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=fb51c6b86eeb06ab9f272171b19b4543&units=metric',
 $.getJSON('http://ip-api.com/json', function(data){ 
 
 var lat = data.lat; //# lat=위도
@@ -17,7 +18,7 @@ $("#humidity").html(json.main.humidity + ' %'); //습도
 $("#overall").html(json.weather[0].main); // 현재 날씨
 
 
-var apiURI ="http://api.openweathermap.org/data/2.5/weather?q=Busan&appid=fb51c6b86eeb06ab9f272171b19b4543"   
+var apiURI ="http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=fb51c6b86eeb06ab9f272171b19b4543"   
           $.ajax({
             url : apiURI,method : 'GET',success :  (data)=> {// 아이콘 취득 
 
