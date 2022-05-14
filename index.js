@@ -5,7 +5,7 @@ var lat = data.lat; //# lat=위도
 var lon = data.lon; //#lon=경도
 var units = "metric"; //#측정단위=미터법
 
-$("#city").html(data.city + ", " + data.country) 
+$("#name").html(data.name + ", " + data.country) 
 console.log(data);
 //Open weather API request 
 $.getJSON('index.json', function(json){ 
