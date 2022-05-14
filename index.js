@@ -5,12 +5,13 @@ var lat = data.lat; //# lat=위도
 var lon = data.lon; //#lon=경도
 var units = "metric"; //#측정단위=미터법
 
-$("#name").html(data.name + ", " + data.country) 
+$("#name").html(data.name) 
 console.log(data);
 //Open weather API request 
 $.getJSON('index.json', function(json){ 
 console.log(json); 
 $("#temp").html(json.main.temp - 273.15 + ' C&deg'); // 섭씨온도 표시
+alert(Math.ceil(testnum));
 $("#style").html(json.main.style) // 옷스타일 표시
 $("#humidity").html(json.main.humidity + ' %'); //습도
 $("#overall").html(json.weather[0].main); // 현재 날씨
