@@ -8,7 +8,7 @@ $("#name").html(data.name)
 $.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1838524&appid=1844db1080e02fd7f0b9e3b8136ec4bf', function(json){ 
 
 $("#temp").html(json.main.temp)// 섭씨온도 표시
-temp-273.15
+temp=temp-273.15
 $("#style").html(json.main.style) // 옷스타일 표시
 $("#humidity").html(json.main.humidity + ' %'); //습도
 $("#overall").html(json.weather[0].main); // 현재 날씨
