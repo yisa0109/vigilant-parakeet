@@ -6,10 +6,10 @@ var lon = data.lon; //#lon=경도
 var units = "metric"; //#측정단위=미터법
 
 $("#name").html(data.name) 
-console.log(data);
+
 //Open weather API request 
 $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129.0403&APPID=1844db1080e02fd7f0b9e3b8136ec4bf', function(json){ 
-console.log(json); 
+
 $("#temp").html(json.main.temp + ' C&deg'); // 섭씨온도 표시
 $("#style").html(json.main.style) // 옷스타일 표시
 $("#humidity").html(json.main.humidity + ' %'); //습도
