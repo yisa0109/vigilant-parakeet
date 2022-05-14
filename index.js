@@ -1,7 +1,13 @@
 //User location
 $.getJSON('http://ip-api.com/json', 
 function(data){ 
- 
+ if (window.location.protocol != "https:") {
+    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+}
+
+if (document.location.protocol == 'http:') {
+    document.location.href = document.location.href.replace('http:', 'https:');
+}
 var lat = data.lat; //# lat=위도
 var lon = data.lon; //#lon=경도
 var units = "metric"; //#측정단위=미터법
