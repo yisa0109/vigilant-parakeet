@@ -1,5 +1,5 @@
 //User location
-$.getJSON('http://ip-api.com/json', function(data){ 
+$.getJSON('index.json', function(data){ 
 
 var lat = data.lat; //# lat=위도
 var lon = data.lon; //#lon=경도
