@@ -20,7 +20,7 @@ var apiURI ="index.json"
           $.ajax({
             url : apiURI,method : 'GET',success :  (data)=> {// 아이콘 취득 
 
-              var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"; 
+              var imgURL = "//openweathermap.org/img/w/" + data.weather[0].icon + ".png"; 
 $('#img').attr("src", imgURL); // 아이콘 표시
 
             }
