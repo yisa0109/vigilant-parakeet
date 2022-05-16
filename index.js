@@ -8,7 +8,6 @@ $("#name").html(data.name)
 $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129.0403&appid=1844db1080e02fd7f0b9e3b8136ec4bf&units=metric', function(json){ 
 
 $("#temp").html(json.main.temp + ' C&deg')// 섭씨온도 표시
-$("#style").html(json.main.style) // 옷스타일 표시
     if(temp <= 4){
         document.images[0].src =('/4~.png')
         document.images[0].width = 600;
