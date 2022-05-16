@@ -8,11 +8,6 @@ $("#style").html(json.main.style) // 옷스타일 표시
 $("#humidity").html(json.main.humidity + ' %'); //습도
 $("#overall").html(json.weather[0].main); // 현재 날씨
 
-	
-imgsrc=""
-	
-	var style = prompt("지금 날씨에 적당한 옷 차림은?"); 
-	{
 if(style <= 4){
             document.images[0].src =('4~.png')
             document.images[0].width = 600;
@@ -45,8 +40,7 @@ if(style <= 4){
             document.images[0].src =('28.png')
             document.images[0].width = 600;
             document.images[0].height = 200;
-          }
-        }
+	  }
 
 
 	
