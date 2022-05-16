@@ -9,11 +9,11 @@ $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129.0
 
 $("#temp").html(json.main.temp + ' C&deg')// 섭씨온도 표시
 $("#style").html(json.main.style) // 옷스타일 표시
-if(style <= 4){
+    if(style <= 4){
         document.images[0].src =('/4~.png')
         document.images[0].width = 600;
-        document.images[0].height = 200;
-    }else if(style >= 5 && style < 8){
+        document.images[0].height = 200;}
+    else if(style >= 5 && style < 8){
         document.images[0].src =('/5~8.png')
         document.images[0].width = 600;
         document.images[0].height = 200;					
@@ -42,6 +42,7 @@ if(style <= 4){
         document.images[0].width = 600;
         document.images[0].height = 200;
     }
+
 
 $("#humidity").html(json.main.humidity + ' %'); //습도
 $("#overall").html(json.weather[0].main); // 현재 날씨
