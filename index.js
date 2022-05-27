@@ -14,6 +14,45 @@ var apiURI ="https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129
 $('#img').attr("src", imgURL); // 아이콘 표시
 		    
 $("#style").html(json.main.style) // 옷스타일 표시
+		    
+				var style = prompt("지금 날씨에 적당한 옷 차림은?");
+				
+					{
+						if(style <= 4){
+							document.images[0].src =('4~.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;
+						}else if(style >= 5 && style < 8){
+							document.images[0].src =('5~8.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;					
+						}else if(style >= 9 && style < 12){
+							document.images[0].src =('9~11.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;
+						}else if(style >= 12 && style < 17){
+							document.images[0].src =('12~16.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;
+						}else if(style >= 17 && style < 20){
+							document.images[0].src =('17~19.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;
+						}else if(style >= 20 && style < 23){
+							document.images[0].src =('20~22.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;
+						}else if(style >= 23 && style < 28){
+							document.images[0].src =('23~27.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;
+						}else if(style >= 28){
+							document.images[0].src =('28.png')
+							document.images[0].width = 600;
+							document.images[0].height = 200;
+						}
+					}
+				
 
 	
 
