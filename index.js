@@ -14,9 +14,8 @@ var apiURI ="https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129
 $('#img').attr("src", imgURL); // 아이콘 표시
 		    
 $("#style").html(json.main.style) // 옷스타일 표시
-		    
-				var style = prompt("지금 날씨에 적당한 옷 차림은?");
-				
+		   
+		    		var temp="style"
 					{
 						if(style <= 4){
 							document.images[0].src =('4~.png')
