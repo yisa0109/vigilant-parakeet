@@ -14,9 +14,17 @@ var apiURI ="https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129
 $('#img').attr("src", imgURL); // 아이콘 표시
 		    
 $("#style").html(json.main.style) // 옷스타일 표시
-$('#myElement').click(function() {
-    location.reload(); //jquery 다시로드 추가
-});	
+$(document).on('touchend',function(){
+
+var top = document.getElementById('refresh').getBoundingClientRect().top; // jquery안먹힘
+
+   if (top > 80){
+
+      location.href = location.href;
+
+   }
+
+}	
 	
 
 		    
