@@ -16,7 +16,6 @@ $('#img').attr("src", imgURL); // 아이콘 표시
 $("#style").html(json.main.style) // 옷스타일 표시
 		   
 		    		var style=temp
-					{
 						if(style <= 4){
 							document.images[0].src =('4~.png')
 							document.images[0].width = 600;
@@ -50,7 +49,7 @@ $("#style").html(json.main.style) // 옷스타일 표시
 							document.images[0].width = 600;
 							document.images[0].height = 200;
 						}
-					}
+					
 				
 
 	
