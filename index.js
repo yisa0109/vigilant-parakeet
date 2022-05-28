@@ -17,27 +17,31 @@ $('#img').attr("src", imgURL); // 아이콘 표시
 		    
 $("#style").html(json.main.style) // 옷스타일 표시
 		    var style =json.main.temp
+		    var color=json.main.temp
 						if(style <= 4){
 							document.images[0].src =('4~.png')
+							document.body.style.backgroundColor = 'skyblue';
 						}else if(style >= 5 && style < 8){
 							document.images[0].src =('5~8.png')					
 						}else if(style >= 9 && style < 12){
 							document.images[0].src =('9~11.png')
+							document.body.style.backgroundColor = 'skyblue';
 						}else if(style >= 12 && style < 17){
 							document.images[0].src =('12~16.png')
+							document.body.style.backgroundColor = 'skyblue';
 						}else if(style >= 17 && style < 20){
 							document.images[0].src =('17~19.png')
+							document.body.style.backgroundColor = 'skyblue';
 						}else if(style >= 20 && style < 23){
 							document.images[0].src =('20~22.png')
+							document.body.style.backgroundColor = 'skyblue';
 						}else if(style >= 23 && style < 28){
 							document.images[0].src =('23~27.png')
+							document.body.style.backgroundColor = 'skyblue';
 						}else if(style >= 28){
 							document.images[0].src =('28.png')
+							document.body.style.backgroundColor = 'skyblue';
 						}
-					
-				
-
-	
 
 		    
 
