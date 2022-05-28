@@ -27,7 +27,7 @@ $("#style").html(json.main.style) // 옷스타일 표시
 							document.images[0].src =('12~16.png')
 						}else if(style >= 17 && style < 20){
 							document.images[0].src =('17~19.png')
-							document.backgroundimages[0].src('Clouds.jpg')
+							background-image('Clouds.jpg')
 						}else if(style >= 20 && style < 23){
 							document.images[0].src =('20~22.png')
 						}else if(style >= 23 && style < 28){
