@@ -34,7 +34,9 @@ $("#style").html(json.main.style) // 옷스타일 표시
 						}else if(style >= 28){
 							document.images[0].src =('28.png')
 						}
-						
+					
+				
+
 	
 
 		    
