@@ -1,6 +1,6 @@
 //User location
-$.getJSON('//ip-api.com/json', function(data){
-$("#city").html(data.city + ", " + data.country)
+$.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129.0403&appid=1844db1080e02fd7f0b9e3b8136ec4bf&units=metric', function(data){ 
+$("#name").html(data.name) 
 //Open weather API request 
 $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129.0403&appid=1844db1080e02fd7f0b9e3b8136ec4bf&units=metric', function(json){ 
 $("#temp").html(json.main.temp + ' C&deg')// 섭씨온도 표시
