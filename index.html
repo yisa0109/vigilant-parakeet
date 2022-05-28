@@ -36,12 +36,12 @@
     document.addEventListener("DOMContentLoaded", function() {
         function getLocation(position) {
 
-            var latitud = position.coords.latitude;
+            var lat = position.coords.latitude;
             var longitude = position.coords.longitude;
         
             var mapContainer = document.getElementById("map")    // 지도를 표시할 DIV
             var mapOption = {
-                  center : new daum.maps.LatLng(latitud, longitude)    // 지도의 중심좌표
+                  center : new daum.maps.LatLng(lat, longitude)    // 지도의 중심좌표
                 , level : 3    // 지도의 확대레벨
             };
             
@@ -49,7 +49,7 @@
             var map = new daum.maps.Map(mapContainer, mapOption);
 
             // 마커가 표시될 위치
-            var markerPosition = new daum.maps.LatLng(latitud, longitude);
+            var markerPosition = new daum.maps.LatLng(lat, longitude);
 
             // 마커를 생성
             var marker = new daum.maps.Marker({ position:markerPosition });
