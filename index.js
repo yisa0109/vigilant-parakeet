@@ -36,50 +36,63 @@ $("#style").html(json.main.style) // 옷스타일 표시
 						}
 					
 //지도설정			
-var map = new naver.maps.Map('map', {
-    center: new naver.maps.LatLng(37.5666805, 126.9784147),
-    zoom: 10,
-    mapTypeId: naver.maps.MapTypeId.NORMAL
-});
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 10 // 지도의 확대 레벨 
+    }; 
 
-var infowindow = new naver.maps.InfoWindow();
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-function onSuccessGeolocation(position) {
-    var location = new naver.maps.LatLng(position.coords.latitude,
-                                         position.coords.longitude);
-
-    map.setCenter(location); // 얻은 좌표를 지도의 중심으로 설정합니다.
-    map.setZoom(10); // 지도의 줌 레벨을 변경합니다.
-
-    infowindow.setContent('<div style="padding:20px;">' + 'geolocation.getCurrentPosition() 위치' + '</div>');
-
-    infowindow.open(map, location);
-    console.log('Coordinates: ' + location.toString());
+// HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+if (navigator.geolocation) {
+    
+    // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+    navigator.geolocation.getCurrentPosition(function(position) {
+        
+        var lat = position.coords.latitude, // 위도
+            lon = position.coords.longitude; // 경도
+        
+        var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+            message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
+        
+        // 마커와 인포윈도우를 표시합니다
+        displayMarker(locPosition, message);
+            
+      });
+    
+} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+    
+    var locPosition = new kakao.maps.LatLng(33.450701, 126.570667),    
+        message = 'geolocation을 사용할수 없어요..'
+        
+    displayMarker(locPosition, message);
 }
 
-function onErrorGeolocation() {
-    var center = map.getCenter();
+// 지도에 마커와 인포윈도우를 표시하는 함수입니다
+function displayMarker(locPosition, message) {
 
-    infowindow.setContent('<div style="padding:20px;">' +
-        '<h5 style="margin-bottom:5px;color:#f00;">Geolocation failed!</h5>'+ "latitude: "+ center.lat() +"<br />longitude: "+ center.lng() +'</div>');
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({  
+        map: map, 
+        position: locPosition
+    }); 
+    
+    var iwContent = message, // 인포윈도우에 표시할 내용
+        iwRemoveable = true;
 
-    infowindow.open(map, center);
-}
-
-$(window).on("load", function() {
-    if (navigator.geolocation) {
-        /**
-         * navigator.geolocation 은 Chrome 50 버젼 이후로 HTTP 환경에서 사용이 Deprecate 되어 HTTPS 환경에서만 사용 가능 합니다.
-         * http://localhost 에서는 사용이 가능하며, 테스트 목적으로, Chrome 의 바로가기를 만들어서 아래와 같이 설정하면 접속은 가능합니다.
-         * chrome.exe --unsafely-treat-insecure-origin-as-secure="http://example.com"
-         */
-        navigator.geolocation.getCurrentPosition(onSuccessGeolocation, onErrorGeolocation);
-    } else {
-        var center = map.getCenter();
-        infowindow.setContent('<div style="padding:20px;"><h5 style="margin-bottom:5px;color:#f00;">Geolocation not supported</h5></div>');
-        infowindow.open(map, center);
-    }
-});
+    // 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        content : iwContent,
+        removable : iwRemoveable
+    });
+    
+    // 인포윈도우를 마커위에 표시합니다 
+    infowindow.open(map, marker);
+    
+    // 지도 중심좌표를 접속위치로 변경합니다
+    map.setCenter(locPosition);      
+}    
 	
 
 		    
