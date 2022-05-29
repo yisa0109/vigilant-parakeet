@@ -1,6 +1,6 @@
 //User location
 $.getJSON('index.json', function(data){ 
-$("#name").html(data.name) 
+$("#city").html(data.name) 
 //Open weather API request 
 $.getJSON('index.json', function(json){ 
 $("#temp").html(json.main.temp + ' C&deg')// 섭씨온도 표시
