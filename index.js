@@ -17,7 +17,6 @@ $('#img').attr("src", imgURL); // 아이콘 표시
 		    
 $("#style").html(json.main.style) // 옷스타일 표시
 		    var style =json.main.temp
-		    var color=json.main.temp
 						if(style <= 4){
 							document.images[0].src =('4~.png')
 							document.body.style.backgroundColor = 'deepblue';							
