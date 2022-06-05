@@ -7,11 +7,6 @@ $("#temp").html(json.main.temp + ' C&deg')// 섭씨온도 표시
 $("#humidity").html(json.main.humidity + ' %'); //습도
 $("#overall").html(json.weather[0].main); // 현재 날씨
 
-		if(json.weather[0].main){
-			document.images[0].src =('4~.png')
-		}else {
-			document.images[0].src =('5~8.png')
-	}
 	
 var apiURI ="https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129.0403&appid=1844db1080e02fd7f0b9e3b8136ec4bf&units=metric"
           $.ajax({
