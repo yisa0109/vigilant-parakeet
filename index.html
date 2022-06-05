@@ -32,27 +32,26 @@
 	<head>
 		<img src="" id="img"></img> 
 	</head>		
-<head>
-<script>
-    function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
-        var t = setTimeout(startTime, 500);
-    }
-    function checkTime(i) {
-        if (i < 10) {
-            i = "0" + i
-        };
-        return i;
-    }
-</script></head><body onload="startTime()">
-<div id="clock"></div></body>
 
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script>        
+	setInterval(function(){                         
+	var timer = new Date();            
+	var h = timer.getHours();           
+	var m = timer.getMinutes();            
+	var s = timer.getSeconds();            
+	document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;        },1000);    
+	</script>
+</head>
+<h1 id="clock"></h1>
+        setInterval(function(){
+            var timer = new Date();
+            var h = timer.getHours();
+            var m = timer.getMinutes();
+            var s = timer.getSeconds();
+            document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;},1000);
 
 
 
