@@ -48,7 +48,13 @@ $("#style").html(json.main.style) // 옷스타일 표시
 							document.images[0].src =('28.png')
 							document.body.style.backgroundColor = 'red';
 						}
-		    
+$("#overall").html(json.weather[0].main); // 우산유무
+var a=json.weather[0].main
+var a=Rain
+		if(a){
+			document.images[0].src =('4~.png')
+		}else {
+			document.images[0].src =('5~8.png')		    
 
 
             }
