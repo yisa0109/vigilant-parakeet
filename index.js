@@ -6,7 +6,7 @@ $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129.0
 $("#temp").html(json.main.temp + ' C&deg')// 섭씨온도 표시
 $("#humidity").html(json.main.humidity + ' %'); //습도
 $("#overall").html(json.weather[0].main); // 현재 날씨
-	if(json.weather[0].main ==Rain){
+	if(Rain){
 		document.write("우산이 필요합니다")
 	}else {
 		document.write("우산이 필요없습니다")
