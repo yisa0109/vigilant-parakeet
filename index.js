@@ -44,6 +44,13 @@ $("#style").html(json.main.style) // 옷스타일 표시
 							document.images[0].src =('28.png')
 							document.body.style.backgroundColor = 'red';
 						}
+		    
+	setInterval(function(){                         
+	var timer = new Date();            
+	var h = timer.getHours();           
+	var m = timer.getMinutes();            
+	var s = timer.getSeconds();            
+	document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;        },1000);    
 
 		    
 
