@@ -15,7 +15,15 @@ var apiURI ="https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129
               var imgURL = "//openweathermap.org/img/w/" + data.weather[0].icon + ".png"; 
 $('#img').attr("src", imgURL); // 아이콘 표시
 		    
+$("#overall").html(json.weather[0].main); // 우산유무
 		    
+if(json.weather[0].main){
+			
+			document.images[0].src =('비.jpg')
+		}else {
+			document.images[0].src =('화창.jpg')		    
+
+        }		    
 $("#style").html(json.main.style) // 옷스타일 표시
 		    var style =json.main.temp
 						if(style <= 4){
@@ -43,14 +51,10 @@ $("#style").html(json.main.style) // 옷스타일 표시
 							document.images[0].src =('28.png')
 							document.body.style.backgroundColor = 'red';
 						}
-$("#overall").html(json.weather[0].main); // 우산유무
-if(json.weather[0].main){
-			
-			document.images[0].src =('비.jpg')
-		}else {
-			document.images[0].src =('화창.jpg')		    
 
-        }
+		    
+
+
             }
           });
         });
