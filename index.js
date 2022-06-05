@@ -56,7 +56,7 @@ var a=Rain
 		}else {
 			document.images[0].src =('5~8.png')		    
 
-
+        }
             }
           });
         });
