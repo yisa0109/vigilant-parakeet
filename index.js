@@ -49,11 +49,10 @@ $("#style").html(json.main.style) // 옷스타일 표시
 							document.body.style.backgroundColor = 'red';
 						}
 $("#overall").html(json.weather[0].main); // 우산유무
-var a=json.weather[0].main
-		if(a==Rain){
-			document.images[0].src =('4~.png')
+if(json.weather[0].main=Rain){
+			document.images[0].src =('비.jpg')
 		}else {
-			document.images[0].src =('5~8.png')		    
+			document.images[0].src =('화창.jpg')		    
 
         }
             }
