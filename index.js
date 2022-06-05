@@ -20,7 +20,6 @@ var apiURI ="https://api.openweathermap.org/data/2.5/weather?lat=35.1028&lon=129
               var imgURL = "//openweathermap.org/img/w/" + data.weather[0].icon + ".png"; 
 $('#img').attr("src", imgURL); // 아이콘 표시
 		    
-<div> </div>
 		    
 $("#style").html(json.main.style) // 옷스타일 표시
 		    var style =json.main.temp
